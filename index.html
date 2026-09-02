@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About UnscrambleX — Word Unscrambler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div style="min-height: 100vh;">
+
+  <section class="hero-wrap" style="background: linear-gradient(135deg, #f6f9fc 0%, #eaf2fa 45%, #c9dff3 100%); color: #0b2a4a;">
+    <header>
+      <div class="hdr-inner" style="max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <a href="https://unscramblex.com/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0b2a4a;">
+          <span style="width: 30px; height: 30px; display: flex; align-items: flex-end; justify-content: center; gap: 3px; padding: 0 5px 7px; background: #0b2a4a; border-radius: 6px;">
+            <span style="width: 8px; height: 3px; background: #fff; border-radius: 1px;"></span>
+            <span style="font-size: 15px; font-weight: 800; line-height: 0.75; color: #fff;">x</span>
+          </span>
+          <span style="font-size: 19px; font-weight: 800; letter-spacing: -0.02em;">Unscramblex</span>
+        </a>
+        <nav class="hdr-nav" style="display: flex; align-items: center; font-weight: 700; color: #0b2a4a;">
+          <a href="https://unscramblex.com/" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #0b2a4a;">
+            Word Finders
+            <span style="width: 10px; height: 6px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg) translateY(-2px);"></span>
+          </a>
+          <a href="https://unscramblex.com/word-lists" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #0b2a4a; margin-left: 20px;">
+            Word Lists
+            <span style="width: 10px; height: 6px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg) translateY(-2px);"></span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero-inner" style="padding-top: 48px;">
+      <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">About the company</p>
+      <h1 style="margin: 0 0 20px; font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; text-wrap: balance;">Every valid word your letters can form, from the official game lists</h1>
+      <p class="lede" style="margin: 0 0 28px; max-width: 620px; font-size: 17px; line-height: 1.62; color: #2c4f70; text-wrap: pretty;">UnscrambleX is a free word unscrambler powering a family of game-specific solvers. This page documents how the site works, how it started, what data it uses, which games it covers, and how to reach us.</p>
+      <div class="chips" style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 8px 13px; border-radius: 999px; background: #ffffff; border: 1px solid #cddff0;">Launched January 2018</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 8px 13px; border-radius: 999px; background: #ffffff; border: 1px solid #cddff0;">Free, no registration</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 8px 13px; border-radius: 999px; background: #ffffff; border: 1px solid #cddff0;">Official game dictionaries</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-grid" style="max-width: 1120px; margin: 0 auto; display: grid; align-items: start;">
+
+    <aside>
+      <p style="margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6b8299;">On this page</p>
+      <nav class="toc-nav" style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; line-height: 1.4; border-left: 2px solid #e4edf6; padding-left: 16px;">
+        <a href="#about" style="text-decoration: none; color: #0b2a4a; font-weight: 700;">About Unscramblex.com</a>
+        <a href="#start" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">How it started</a>
+        <a href="#development" style="text-decoration: none; color: #3d5f7d; padding-left: 24px;">Who is behind it</a>
+        <a href="#how-it-works" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">How it works</a>
+        <a href="#contact" style="text-decoration: none; color: #0b2a4a; font-weight: 700;">How to contact us</a>
+        <a href="#social" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">Social accounts</a>
+        <a href="#email" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">Official email</a>
+        <a href="#headquarters" style="text-decoration: none; color: #0b2a4a; font-weight: 700;">Headquarters</a>
+        <a href="#data" style="text-decoration: none; color: #0b2a4a; font-weight: 700;">Data we use</a>
+        <a href="#privacy" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">Protecting private data</a>
+        <a href="#games" style="text-decoration: none; color: #0b2a4a; font-weight: 700;">Word games available</a>
+        <a href="#word-count" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">How many words</a>
+        <a href="#dictionary" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">Use as a dictionary</a>
+        <a href="#different" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">What makes it different</a>
+        <a href="#advantages" style="text-decoration: none; color: #3d5f7d; padding-left: 12px;">Advantages</a>
+        <a href="#names" style="text-decoration: none; color: #0b2a4a; font-weight: 700;">Official names</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <section id="about" style="scroll-margin-top: 24px;">
+        <h2 class="section-h2" style="margin: 0 0 22px; font-weight: 800; line-height: 1.14; letter-spacing: -0.022em;">About Unscramblex.com</h2>
+        <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Unscramblex.com is a word unscrambler: you enter jumbled letters and it returns every valid word they can form — ranked by score, filtered however your game demands, with definitions a click away. It launched in January 2018 and has grown, iteration by iteration, into the family of game-specific solvers on the site today, all running on the same engine and the official word lists each game recognizes. The tool is published under the official name <a href="https://unscramblex.com/">Unscramble Words</a>.</p>
+        <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Those tools cover Scrabble and Words With Friends through to Wordscapes, the daily Jumble and Wordle. The site is free, requires no registration, and works the same on a phone mid-game as on a desktop. It is supported by advertising, which is what keeps the tools open to everyone.</p>
+        <p style="margin: 0 0 34px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Part of what the site earns goes back into the ecosystem it is built on: through Open Collective, UnscrambleX contributes to open-source projects, and those contributions are publicly visible on the ledger — as that kind of thing should be.</p>
+
+        <div class="three-col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px;">
+          <div style="background: #f8fbfe; border: 1px solid #e4edf6; border-top: 3px solid #2e7bd1; border-radius: 8px; padding: 22px 20px;">
+            <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Vision</p>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.58; color: #2c4f70;">Word games where "is it a word?" is never a guess — the official list answers it in a second.</p>
+          </div>
+          <div style="background: #f8fbfe; border: 1px solid #e4edf6; border-top: 3px solid #2e7bd1; border-radius: 8px; padding: 22px 20px;">
+            <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Mission</p>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.58; color: #2c4f70;">Complete results from official word lists, returned fast enough to keep a game moving.</p>
+          </div>
+          <div style="background: #f8fbfe; border: 1px solid #e4edf6; border-top: 3px solid #2e7bd1; border-radius: 8px; padding: 22px 20px;">
+            <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Purpose</p>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.58; color: #2c4f70;">To make the tools gradually unnecessary by turning each search into practice.</p>
+          </div>
+        </div>
+
+        <div id="start" style="scroll-margin-top: 24px; padding-top: 44px;">
+          <h3 class="section-h3" style="margin: 0 0 18px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">How did Unscramblex.com Start?</h3>
+          <div style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 20px 22px; margin-bottom: 22px;">
+            <p style="margin: 0 0 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Definitive answer</p>
+            <p style="margin: 0; font-size: 17.5px; line-height: 1.6; font-weight: 700;">UnscrambleX launched in January 2018 as a fast way to solve a rack of letters, and has grown iteration by iteration into the set of game-specific solvers on the site today.</p>
+          </div>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">The evidence for that origin is in the product itself. The first version did one thing — take a rack of letters and return the valid words inside it — and the focus has not changed since: complete results from official word lists, returned fast enough to keep a game moving. Everything added afterwards is a variation on that single job, tuned to the rules of a particular game.</p>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">That is also why the site is organised the way it is. Rather than one generic solver with settings buried in a menu, each game gets its own tool with its own dictionary — because the lists genuinely differ, and a word that scores in Words With Friends is not always legal in Scrabble.</p>
+
+          <div id="development" style="scroll-margin-top: 24px; padding-top: 30px;">
+            <h4 style="margin: 0 0 16px; font-size: 19.5px; font-weight: 700; line-height: 1.3;">Who is Behind the Development of Unscramblex.com?</h4>
+            <div style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 20px 22px; margin-bottom: 20px;">
+              <p style="margin: 0 0 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Definitive answer</p>
+              <p style="margin: 0; font-size: 17.5px; line-height: 1.6; font-weight: 700;">Unscramblex.com is built and maintained by the independent UnscrambleX team, which has run the site since its January 2018 launch and can be reached directly at <a href="mailto:webmaster@unscramblex.com">webmaster@unscramblex.com</a>.</p>
+            </div>
+            <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">The team handles the solver engine, the word-list pipeline that tracks revisions to the official dictionaries, and the definitions and help content published alongside results. The same inbox that takes bug reports takes word-list corrections, and both go to the people who maintain the code.</p>
+            <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 20px; background: #f8fbfe;">
+              <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Verifiable footprint</p>
+              <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 16.5px; line-height: 1.6;">
+                <li>Open-source contributions published on the team's <a href="#">Open Collective ledger</a>.</li>
+                <li>Site updates and word tips posted to <a href="https://facebook.com/unscramblex">facebook.com/unscramblex</a>.</li>
+                <li>Data handling documented in the <a href="https://unscramblex.com/privacy">privacy policy</a>, terms, and contact pages.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="how-it-works" style="scroll-margin-top: 24px; padding-top: 44px;">
+          <h3 class="section-h3" style="margin: 0 0 18px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">How does Unscramblex.com work?</h3>
+          <div style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 20px 22px; margin-bottom: 22px;">
+            <p style="margin: 0 0 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Definitive answer</p>
+            <p style="margin: 0; font-size: 17.5px; line-height: 1.6; font-weight: 700;">Unscramblex.com works by matching the letter counts of your input against indexed official word lists — not by brute-forcing permutations — then ranking every valid match by score and attaching its definition.</p>
+          </div>
+          <div style="display: grid; gap: 1px; background: #e4edf6; border: 1px solid #e4edf6; border-radius: 8px; overflow: hidden; margin-bottom: 22px;">
+            <div style="background: #f8fbfe; padding: 17px 22px; display: grid; align-items: baseline;" class="steps-row">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">01</span>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">You enter your letters.</strong> Up to fifteen characters, wildcards included for blank tiles and unknown letters.</p>
+            </div>
+            <div style="background: #f8fbfe; padding: 17px 22px; display: grid; align-items: baseline;" class="steps-row">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">02</span>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Your game's dictionary is selected.</strong> Searches check licensed and official game lists — the US and UK Scrabble word lists, the Words With Friends list — rather than a generic English dictionary.</p>
+            </div>
+            <div style="background: #f8fbfe; padding: 17px 22px; display: grid; align-items: baseline;" class="steps-row">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">03</span>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Letter counts are matched against the index.</strong> Because the lists are pre-indexed, results arrive in milliseconds even for fifteen-letter inputs with wildcards.</p>
+            </div>
+            <div style="background: #f8fbfe; padding: 17px 22px; display: grid; align-items: baseline;" class="steps-row">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">04</span>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Results are ranked and filtered.</strong> Matches come back ranked by score and grouped by length, filtered however your game demands.</p>
+            </div>
+            <div style="background: #f8fbfe; padding: 17px 22px; display: grid; align-items: baseline;" class="steps-row">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">05</span>
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Definitions sit one click away.</strong> Every result links to its meaning and part of speech, so you can check a word before you play it.</p>
+            </div>
+          </div>
+          <p style="margin: 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Word lists are updated as the official dictionaries revise, so recent additions appear here once they become playable. The premise behind all of it is that "is it a word?" always means "is it valid in your game?"</p>
+        </div>
+      </section>
+
+      <section id="contact" style="scroll-margin-top: 24px; padding-top: 72px; border-top: 1px solid #e4edf6; margin-top: 64px;">
+        <h2 class="section-h2" style="margin: 0 0 20px; font-weight: 800; line-height: 1.14; letter-spacing: -0.022em;">How to Contact Unscramblex.com</h2>
+        <p style="margin: 0 0 24px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Contacting Unscramblex.com means sending a message through one of two official channels: email for anything that needs a written record, and Facebook for short questions. To reach the team, follow these steps:</p>
+        <ol style="margin: 0 0 22px; padding-left: 22px; display: grid; gap: 12px; font-size: 17.5px; line-height: 1.65;">
+          <li><strong style="font-weight: 700;">Choose the channel.</strong> Technical issues, word-list corrections and general questions go to email; quick questions are fastest on Facebook.</li>
+          <li><strong style="font-weight: 700;">Include the exact search.</strong> Paste the letters you entered, the game you were solving for, and the page URL — it is the quickest route to a fix.</li>
+          <li><strong style="font-weight: 700;">Send it.</strong> The inbox is monitored and everything gets read; response times vary with volume.</li>
+        </ol>
+
+        <div id="social" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">What are the Official Social Media Accounts of Unscramblex.com?</h3>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Unscramblex.com operates one official social media account. Any other profile using the UnscrambleX name is not run by the team.</p>
+          <a href="https://facebook.com/unscramblex" class="social-card" style="text-decoration: none; color: inherit; border: 1px solid #e4edf6; border-radius: 8px; padding: 18px 20px; display: grid; gap: 5px; background: #f8fbfe; max-width: 420px;">
+            <span style="font-size: 15.5px; font-weight: 700;">Facebook</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #1d5fab;">facebook.com/unscramblex</span>
+            <span style="font-size: 13.5px; color: #3d5f7d;">Updates, word tips, and the quickest route for short questions.</span>
+          </a>
+        </div>
+
+        <div id="email" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">What is the Official Email Address of Unscramblex.com?</h3>
+          <div class="email-row" style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;">
+            <div>
+              <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Official email address</p>
+              <a href="mailto:webmaster@unscramblex.com" style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 500;">webmaster@unscramblex.com</a>
+            </div>
+            <a href="mailto:webmaster@unscramblex.com" class="email-cta" style="text-decoration: none; background: #1d5fab; color: #fff; font-size: 14.5px; font-weight: 700; padding: 12px 20px; border-radius: 6px;">Write to us</a>
+          </div>
+          <p style="margin: 16px 0 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">This is the single official address, used for technical issues, word-list corrections and general questions. The inbox is monitored and everything gets read; response times vary with volume.</p>
+        </div>
+      </section>
+
+      <section id="headquarters" style="scroll-margin-top: 24px; padding-top: 72px; border-top: 1px solid #e4edf6; margin-top: 64px;">
+        <h2 class="section-h2" style="margin: 0 0 20px; font-weight: 800; line-height: 1.14; letter-spacing: -0.022em;">Where is Unscramblex.com Headquarter are located?</h2>
+        <div style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 20px 22px; margin-bottom: 22px;">
+          <p style="margin: 0 0 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Definitive answer</p>
+          <p style="margin: 0; font-size: 17.5px; line-height: 1.6; font-weight: 700;">Unscramblex.com has no public office address: it is run as an independent, remote-operated website, and all correspondence is handled through <a href="mailto:webmaster@unscramblex.com">webmaster@unscramblex.com</a>.</p>
+        </div>
+        <p style="margin: 0 0 18px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">The evidence is in how the site is published. UnscrambleX is independent and not affiliated with the game publishers whose dictionaries it supports, and it operates entirely online — the site, the email inbox and the Facebook page are the full set of official channels.</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Legal, data and rights enquiries are handled through the same inbox, with the terms of use and <a href="https://unscramblex.com/privacy">privacy policy</a> setting out what the site processes and how.</p>
+      </section>
+
+      <section id="data" style="scroll-margin-top: 24px; padding-top: 72px; border-top: 1px solid #e4edf6; margin-top: 64px;">
+        <h2 class="section-h2" style="margin: 0 0 20px; font-weight: 800; line-height: 1.14; letter-spacing: -0.022em;">What type of data does Unscramblex.com use?</h2>
+        <p style="margin: 0 0 22px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Unscramblex.com uses four types of data: licensed dictionary data, game rule data, advertising and analytics data, and technical data. It uses no names, addresses or payment details, because the site requires no registration.</p>
+        <div style="display: grid; gap: 14px; margin-bottom: 22px;">
+          <div style="border: 1px solid #e4edf6; border-left: 3px solid #2e7bd1; border-radius: 6px; padding: 16px 20px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.65;"><strong style="font-weight: 700;">Dictionary data —</strong> licensed and official game word lists, including the US and UK Scrabble lists and the Words With Friends list, plus definitions and parts of speech.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-left: 3px solid #2e7bd1; border-radius: 6px; padding: 16px 20px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.65;"><strong style="font-weight: 700;">Game rule data —</strong> tile values and validity rules for each supported game, so scores and legality match the game you are actually playing.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-left: 3px solid #2e7bd1; border-radius: 6px; padding: 16px 20px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.65;"><strong style="font-weight: 700;">Advertising and analytics data —</strong> aggregate measurement used to serve the ads that keep the tools free, and to see which solvers people rely on.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-left: 3px solid #2e7bd1; border-radius: 6px; padding: 16px 20px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 17px; line-height: 1.65;"><strong style="font-weight: 700;">Technical data —</strong> browser, device and language signals needed to render results correctly on a phone mid-game as well as a desktop.</p>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">For the full account of what the site processes and how it is handled, see the <a href="https://unscramblex.com/privacy">privacy policy</a>.</p>
+
+        <div id="privacy" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">How does Unscramblex.com protect your Private Data?</h3>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Private data is protected first by not collecting it. Because no registration is required, there is no account, no password and no profile to secure — and the security measures in place follow from that:</p>
+          <ul style="margin: 0 0 20px; padding-left: 22px; display: grid; gap: 12px; font-size: 17.5px; line-height: 1.65;">
+            <li><strong style="font-weight: 700;">No registration, no stored identity.</strong> Searches are not tied to a named user, because the site never asks who you are.</li>
+            <li><strong style="font-weight: 700;">Encrypted delivery.</strong> Every page and every search is served over HTTPS, so letters you type are not readable in transit.</li>
+            <li><strong style="font-weight: 700;">Data minimisation.</strong> Only what is needed to serve results and measure advertising is processed; nothing beyond that is retained.</li>
+            <li><strong style="font-weight: 700;">Documented handling.</strong> Third-party advertising and analytics processing is disclosed in the <a href="https://unscramblex.com/privacy">privacy policy</a>, alongside the terms and conditions.</li>
+            <li><strong style="font-weight: 700;">A monitored channel for concerns.</strong> Data questions and corrections go to <a href="mailto:webmaster@unscramblex.com">webmaster@unscramblex.com</a> and are read by the people who run the site.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="games" style="scroll-margin-top: 24px; padding-top: 72px; border-top: 1px solid #e4edf6; margin-top: 64px;">
+        <h2 class="section-h2" style="margin: 0 0 20px; font-weight: 800; line-height: 1.14; letter-spacing: -0.022em;">How many Word Games are available on Unscramblex.com?</h2>
+        <p style="margin: 0 0 22px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Six games have dedicated tools on Unscramblex.com, alongside four general-purpose solvers. Each applies its game's own dictionary, because the lists genuinely differ:</p>
+        <div class="two-col" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 22px;">
+          <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;"><a href="https://unscramblex.com/">Scrabble</a> —</strong> plays ranked against the US and UK Scrabble word lists.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Scrabble GO —</strong> the same rack, matched to the list the app recognizes.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Words With Friends —</strong> the WWF list and its own scoring table.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Wordscapes —</strong> every word hidden in a circle of letters, grouped by length.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Wordle —</strong> candidates narrowed by the letters you have confirmed or ruled out.</p>
+          </div>
+          <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Daily Jumble —</strong> the day's scrambled words unscrambled in one pass.</p>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">The general tools sit alongside them: the <a href="https://unscramblex.com/anagram">anagram solver</a>, the word descrambler, the word solver, and the word scrambler for building puzzles of your own.</p>
+
+        <div id="word-count" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">How many Words are available on Unscramblex.com?</h3>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">The number of available words is a range rather than a single figure, because it depends on which game you are solving for. Three factors set that range:</p>
+          <div style="display: grid; gap: 1px; background: #e4edf6; border: 1px solid #e4edf6; border-radius: 8px; overflow: hidden;">
+            <div style="background: #f8fbfe; padding: 16px 20px;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Which official list applies.</strong> The US and UK Scrabble lists and the Words With Friends list each hold a different set of valid words, so the total shifts with the game.</p>
+            </div>
+            <div style="background: #f8fbfe; padding: 16px 20px;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Dictionary revisions.</strong> Lists are updated as the official dictionaries revise, so the count moves when new words become playable.</p>
+            </div>
+            <div style="background: #f8fbfe; padding: 16px 20px;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Length limits of the game.</strong> Inputs run up to fifteen letters, and words longer than a game can physically place are indexed but rarely returned.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="dictionary" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">Can I use Unscramblex.com as a dictionary to learn meaning of words?</h3>
+          <div style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 20px 22px; margin-bottom: 22px;">
+            <p style="margin: 0 0 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Definitive answer</p>
+            <p style="margin: 0; font-size: 17.5px; line-height: 1.6; font-weight: 700;">Yes. Every result links to its definition and part of speech, so a single search answers validity, score and meaning at once.</p>
+          </div>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">That is why teachers and learners use the tools as much as players do: unscramble a rack, then read the meanings of the words you had not met before, without leaving the page.</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Used that way the site doubles as practice. Checking a word here tells you whether it is legal in your game, what it scores, and what it means — and the review habit is how the tools make themselves gradually unnecessary.</p>
+        </div>
+
+        <div id="different" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">What Makes Unscramble.me Different From Other Word Solver Tools?</h3>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Four things separate it from other word solver tools:</p>
+          <ul style="margin: 0; padding-left: 22px; display: grid; gap: 12px; font-size: 17.5px; line-height: 1.65;">
+            <li><strong style="font-weight: 700;">Official lists, not a generic dictionary.</strong> Searches run against licensed game word lists, because "is it a word?" always means "is it valid in your game?"</li>
+            <li><strong style="font-weight: 700;">Game-specific tools on one engine.</strong> Each game gets its own solver and dictionary rather than one generic box with hidden settings.</li>
+            <li><strong style="font-weight: 700;">Index matching, not brute force.</strong> Letter counts are matched against indexed lists, so fifteen-letter inputs with wildcards still return in milliseconds.</li>
+            <li><strong style="font-weight: 700;">Complete results with meanings attached.</strong> Every valid word comes back, ranked by score, with its definition a click away.</li>
+          </ul>
+        </div>
+
+        <div id="advantages" style="scroll-margin-top: 24px; padding-top: 40px;">
+          <h3 class="section-h3" style="margin: 0 0 16px; font-weight: 700; line-height: 1.22; letter-spacing: -0.015em;">What are the Advantages of Unscramblex.com compared to other Word Game Software?</h3>
+          <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.7; text-wrap: pretty;">Compared with installed word game software, Unscramblex.com has five advantages:</p>
+          <div class="two-col" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+            <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Free and open to everyone —</strong> advertising supports the site, so the tools cost nothing to use.</p>
+            </div>
+            <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">No registration —</strong> nothing to install, no account to create, no password to lose.</p>
+            </div>
+            <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Same experience anywhere —</strong> it works identically on a phone mid-game and on a desktop.</p>
+            </div>
+            <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Always current lists —</strong> dictionary revisions apply for everyone at once, with no version to update.</p>
+            </div>
+            <div style="border: 1px solid #e4edf6; border-radius: 8px; padding: 16px 18px; background: #f8fbfe;">
+              <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><strong style="font-weight: 700;">Gives back to open source —</strong> part of what the site earns goes to open-source projects through a public Open Collective ledger.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="names" style="scroll-margin-top: 24px; padding-top: 72px; border-top: 1px solid #e4edf6; margin-top: 64px;">
+        <h2 class="section-h2" style="margin: 0 0 20px; font-weight: 800; line-height: 1.14; letter-spacing: -0.022em;">What are the Official Names of the Unscramblex.com?</h2>
+        <div style="border: 1px solid #c3dbf2; background: #f3f8fd; border-radius: 8px; padding: 20px 22px; margin-bottom: 22px;">
+          <p style="margin: 0 0 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #1d5fab;">Definitive answer</p>
+          <p style="margin: 0; font-size: 17.5px; line-height: 1.6; font-weight: 700;">The official name of the service is <a href="https://unscramblex.com/">Unscramble Words</a>, published on the domain unscramblex.com and branded as UnscrambleX.</p>
+        </div>
+        <div style="display: grid; gap: 1px; background: #e4edf6; border: 1px solid #e4edf6; border-radius: 8px; overflow: hidden; margin-bottom: 22px;">
+          <div style="background: #f8fbfe; padding: 16px 20px; display: grid; align-items: baseline;" class="name-row">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">Official name</span>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;"><a href="https://unscramblex.com/">Unscramble Words</a> — the name of the tool as published.</p>
+          </div>
+          <div style="background: #f8fbfe; padding: 16px 20px; display: grid; align-items: baseline;" class="name-row">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">Brand name</span>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;">UnscrambleX — used in the logo, the Facebook page and the product copy.</p>
+          </div>
+          <div style="background: #f8fbfe; padding: 16px 20px; display: grid; align-items: baseline;" class="name-row">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">Domain name</span>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;">unscramblex.com — the only official domain for the service.</p>
+          </div>
+          <div style="background: #f8fbfe; padding: 16px 20px; display: grid; align-items: baseline;" class="name-row">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #1d5fab;">Tool names</span>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6;">Word unscrambler, word descrambler, word solver, <a href="https://unscramblex.com/anagram">anagram solver</a> and word scrambler.</p>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.7; text-wrap: pretty;">The evidence for these names is on the site itself: the homepage titles the tool <a href="https://unscramblex.com/">Unscramble Words</a>, the logo and Facebook page carry UnscrambleX, and every page states that unscramblex.com is independent and not affiliated with or endorsed by the game publishers whose lists it supports.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer style="background: #0b2a4a; color: #c6d8e8; padding: 44px 44px 40px;">
+    <div style="max-width: 1120px; margin: 0 auto; display: grid; gap: 28px;">
+      <div class="footer-top" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between;">
+        <div style="max-width: 340px;">
+          <p style="margin: 0 0 10px; color: #fff; font-size: 17px; font-weight: 800;">Unscramblex</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6;">Free word unscrambler running on the official word lists each game recognizes. Published as <a href="https://unscramblex.com/" style="color: #9fc8ee;">Unscramble Words</a>.</p>
+        </div>
+        <nav class="footer-links" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 14px;">
+          <a href="#about" style="color: #c6d8e8; text-decoration: none;">About</a>
+          <a href="https://unscramblex.com/articles" style="color: #c6d8e8; text-decoration: none;">Articles</a>
+          <a href="https://unscramblex.com/privacy" style="color: #c6d8e8; text-decoration: none;">Privacy Policy</a>
+          <a href="https://unscramblex.com/terms" style="color: #c6d8e8; text-decoration: none;">Terms &amp; Conditions</a>
+          <a href="#contact" style="color: #c6d8e8; text-decoration: none;">Contact</a>
+        </nav>
+      </div>
+      <div style="border-top: 1px solid #1c4470; padding-top: 20px; display: grid; gap: 8px; font-size: 12.5px; line-height: 1.6; color: #93aec7;">
+        <p style="margin: 0;">SCRABBLE® and Words With Friends® are trademarks of their respective owners. unscramblex.com is independent and not affiliated with or endorsed by them.</p>
+        <p style="margin: 0;">© 2026 unscramblex.com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
