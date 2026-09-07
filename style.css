@@ -1,15 +1,36 @@
+:root {
+  --brand-blue: #3083e2;
+  --brand-navy: #052244;
+  --brand-light: #d1e7f7;
+  --brand-pale: #f4f9fd;
+  --brand-border: #c5dced;
+}
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #ffffff; color: #0b2a4a; font-family: "Nunito Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-a { color: #1d5fab; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: #164b88; }
+body { margin: 0; overflow-x: clip; background: #ffffff; color: var(--brand-navy); font-family: "Sora", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--brand-blue) !important; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color 160ms ease, text-decoration-color 160ms ease; }
+a:hover { color: var(--brand-navy) !important; text-decoration-color: var(--brand-blue); }
+a:focus-visible { outline: 3px solid rgba(48, 131, 226, 0.35); outline-offset: 4px; border-radius: 2px; }
 * { box-sizing: border-box; }
-.hdr-nav a:hover { color: #1d5fab; }
-.social-card:hover { border-color: #2e7bd1; background: #f3f8fd; }
-.email-cta:hover { background: #164b88; }
+.hero-wrap { background: linear-gradient(135deg, #f7fbff 0%, var(--brand-light) 100%) !important; color: var(--brand-navy) !important; }
+.hero-wrap a { color: var(--brand-navy) !important; }
+.hdr-nav a:hover { color: var(--brand-blue) !important; }
+.social-card,
+.three-col > div,
+.two-col > div { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease; }
+.social-card:hover,
+.three-col > div:hover,
+.two-col > div:hover { border-color: var(--brand-blue) !important; background: var(--brand-pale) !important; box-shadow: 0 10px 24px rgba(5, 34, 68, 0.09); transform: translateY(-3px); }
+.email-cta { transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
+.email-cta:hover { background: var(--brand-navy) !important; box-shadow: 0 8px 18px rgba(5, 34, 68, 0.16); transform: translateY(-2px); }
 .hero-wrap { padding: 0 20px 56px; }
 .hero-inner { max-width: 760px; margin: 0 auto; text-align: center; }
 .hero-inner h1 { font-size: clamp(30px, 7vw, 52px); }
-.hero-inner .lede { margin-left: auto; margin-right: auto; }
+.lede-wrap { max-width: 620px; margin: 0 auto 28px; text-align: center; }
+.hero-inner .lede { margin-left: auto; margin-right: auto; display: -webkit-box; overflow: hidden; text-align: center; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.lede-wrap.is-expanded .lede { display: block; }
+.show-more { margin-top: 12px; padding: 7px 12px; border: 1px solid rgba(5, 34, 68, 0.22); border-radius: 999px; background: rgba(255, 255, 255, 0.72); color: var(--brand-navy); cursor: pointer; font: 600 12px/1.2 "Sora", system-ui, sans-serif; transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease; }
+.show-more:hover { border-color: var(--brand-blue); background: #ffffff; transform: translateY(-2px); }
+.show-more:focus-visible { outline: 3px solid rgba(48, 131, 226, 0.35); outline-offset: 3px; }
 .hero-inner .chips { justify-content: center; }
 .hdr-inner { padding: 16px 20px 0; }
 .hdr-nav { gap: 20px; font-size: 14px; }
@@ -22,6 +43,7 @@ a:hover { color: #164b88; }
 .email-row { flex-direction: column; align-items: flex-start !important; }
 .footer-top { flex-direction: column; align-items: flex-start !important; }
 .footer-links { gap: 14px 22px !important; }
+.email-row a[href^="mailto:"] { overflow-wrap: anywhere; }
 h2.section-h2 { font-size: 28px !important; }
 h3.section-h3 { font-size: 22px !important; }
 main section { padding-top: 48px !important; margin-top: 40px !important; }
@@ -56,4 +78,8 @@ main > section:first-of-type { padding-top: 8px !important; margin-top: 0 !impor
   main section { padding-top: 72px !important; margin-top: 64px !important; }
   h2.section-h2 { font-size: 36px !important; }
   h3.section-h3 { font-size: 26px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
