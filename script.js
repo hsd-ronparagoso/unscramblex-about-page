@@ -13,7 +13,9 @@
       if (!firstParagraph || group.scrollHeight <= firstParagraph.scrollHeight) return;
 
       group.dataset.expandableReady = "true";
-      var collapsedHeight = firstParagraph.scrollHeight;
+      var collapsedHeight = firstParagraph.offsetTop + firstParagraph.offsetHeight + 8;
+      group.classList.add("is-collapsed");
+      group.style.height = collapsedHeight + "px";
       group.style.maxHeight = collapsedHeight + "px";
 
       var button = document.createElement("button");
@@ -27,12 +29,13 @@
         var expanded = group.classList.toggle("is-expanded");
         button.setAttribute("aria-expanded", String(expanded));
         button.firstChild.textContent = expanded ? "Show Less " : "Show More ";
+        group.style.height = expanded ? group.scrollHeight + "px" : collapsedHeight + "px";
         group.style.maxHeight = expanded ? group.scrollHeight + "px" : collapsedHeight + "px";
       });
     }
 
     function addToggle(paragraph) {
-      if (paragraph.closest("[data-expandable-group]") || paragraph.dataset.expandableReady || paragraph.textContent.trim().length < minimumCharacters) return;
+      if (paragraph.closest("[data-expandable-group], [data-no-expand], .section-head") || paragraph.dataset.expandableReady || paragraph.textContent.trim().length < minimumCharacters) return;
       var styles = window.getComputedStyle(paragraph);
       var lineHeight = parseFloat(styles.lineHeight);
       if (!lineHeight || paragraph.scrollHeight <= lineHeight * 5.2) return;
@@ -78,7 +81,11 @@
       });
       document.querySelectorAll(".expandable-group:not(.is-expanded)").forEach(function (group) {
         var firstParagraph = group.querySelector("p");
-        if (firstParagraph) group.style.maxHeight = firstParagraph.scrollHeight + "px";
+        if (firstParagraph) {
+          var collapsedHeight = firstParagraph.offsetTop + firstParagraph.offsetHeight + 8;
+          group.style.height = collapsedHeight + "px";
+          group.style.maxHeight = collapsedHeight + "px";
+        }
       });
     });
   })();
@@ -348,26 +355,6 @@
     updateProgress();
   })();
 
-  /* ---------- origin / team tabs ---------- */
-  function activateTab(key) {
-    document.querySelectorAll("[data-tab-btn]").forEach(function (b) {
-      var active = b.dataset.tabBtn === key;
-      b.classList.toggle("is-active", active);
-      b.setAttribute("aria-selected", String(active));
-    });
-    document.querySelectorAll("[data-tab-panel]").forEach(function (p) {
-      p.classList.toggle("is-active", p.dataset.tabPanel === key);
-    });
-  }
-  document.querySelectorAll("[data-tab-btn]").forEach(function (btn) {
-    btn.addEventListener("click", function () { activateTab(btn.dataset.tabBtn); });
-  });
-  if (window.location.hash === "#development" || window.location.hash === "#team") {
-    activateTab("team");
-    var devTarget = document.getElementById("development");
-    if (devTarget) setTimeout(function () { devTarget.scrollIntoView(); }, 0);
-  }
-
   /* ---------- how-it-works stepper + pipeline ---------- */
   (function () {
     var stepBtns = document.querySelectorAll("[data-step]");
@@ -433,6 +420,31 @@
       }
     });
   });
+
+  /* ---------- contact channel picker ---------- */
+  (function () {
+    var picker = document.querySelector("[data-channel-picker]");
+    if (!picker) return;
+    var btns = picker.querySelectorAll("[data-channel-btn]");
+    var panels = picker.querySelectorAll("[data-channel-panel]");
+    var cards = document.querySelectorAll("[data-channel-card]");
+
+    function setChannel(key) {
+      btns.forEach(function (b) {
+        var active = b.dataset.channelBtn === key;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-selected", String(active));
+      });
+      panels.forEach(function (p) { p.classList.toggle("is-active", p.dataset.channelPanel === key); });
+      cards.forEach(function (c) { c.classList.toggle("is-highlighted", c.dataset.channelCard === key); });
+    }
+
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () { setChannel(btn.dataset.channelBtn); });
+    });
+
+    setChannel("email");
+  })();
 
   /* ---------- comparison toggle ---------- */
   (function () {
