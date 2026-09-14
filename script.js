@@ -297,7 +297,7 @@
       var word = guess.join("");
       if (WORDS[word] !== undefined) {
         if (found.has(word)) {
-          setFeedback("Already found " + word + " — try another combination.", false);
+          setFeedback("Already found " + word + ", try another combination.", false);
           scheduleClear(900);
         } else {
           found.add(word);
@@ -306,12 +306,12 @@
           if (found.size === TOTAL) {
             setFeedback("All " + TOTAL + " found! Shuffle to play again, or try the real solver.", true);
           } else {
-            setFeedback(word + " — nice, worth " + WORDS[word] + " points.", true);
+            setFeedback(word + ", nice, worth " + WORDS[word] + " points.", true);
           }
           scheduleClear(900);
         }
       } else if (guess.length >= RACK.length) {
-        setFeedback("No match in this rack — tap Shuffle to reset.", false);
+        setFeedback("No match in this rack, tap Shuffle to reset.", false);
         scheduleClear(900);
       } else {
         setFeedback("Keep going, or tap a letter above to remove it.", false);
@@ -333,7 +333,7 @@
       var tile = rackEl.querySelector('.demo-tile[data-letter="' + letter + '"]');
       if (tile) tile.disabled = false;
       updateGuessDisplay();
-      setFeedback("Letter removed — keep building.", false);
+      setFeedback("Letter removed, keep building.", false);
     });
 
     if (shuffleBtn) {
